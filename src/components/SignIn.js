@@ -10,7 +10,10 @@ import {useHistory} from "react-router-dom"
 export default function Landing() {
   const history = useHistory();
   function redirectHandler(){
-    history.push("/register")
+    history.push("/signup")
+  }
+  function loginHandler(){
+    history.push("/getstarted")
   }
   return (
     <div id="landing-bg">
@@ -28,7 +31,7 @@ export default function Landing() {
           <Form.Control type="password" placeholder="Password" />
         </FloatingLabel>
         </Container>
-        <div><button className="button-filled mt-3 mb-3">login</button>
+        <div><button className="button-filled mt-3 mb-3" onClick={loginHandler}>login</button>
         <p className="mt-3">Don't have an account?</p>
         <button className="button-trans" onClick={redirectHandler}>Sign Up</button>
         </div>
