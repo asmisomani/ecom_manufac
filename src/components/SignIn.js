@@ -13,7 +13,7 @@ export default function Landing() {
     history.push("/signup")
   }
   function loginHandler(){
-    history.push("/getstarted")
+    history.push("/setplan")
   }
   return (
     <div id="landing-bg">

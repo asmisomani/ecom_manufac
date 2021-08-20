@@ -2,6 +2,7 @@ import React from 'react'
 import SignUp from '../components/SignUp'
 import SignIn from '../components/SignIn'
 import {Route, Switch} from "react-router-dom"
+import UserGuide from './UserGuide'
 
 export default function Landing() {
     return (<div>
@@ -12,7 +13,7 @@ export default function Landing() {
             <Route path="/signup">
                 <SignUp/>
             </Route>
-            <Route path="*">
+            <Route path="/" exact>
                 <SignIn/>
             </Route>
         </Switch>

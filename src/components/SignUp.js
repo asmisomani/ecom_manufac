@@ -13,6 +13,9 @@ export default function SignUp() {
     function redirectHandlerIn(){
         history.push("/signin")
     }
+    function redirectHandlerUp(){
+      history.push("/signin")
+    }
   return (
     <div>
       <div id="landing-bg">
@@ -176,7 +179,7 @@ export default function SignUp() {
                 </FloatingLabel>
               </Col>
             </Row>
-            <div><button className="button-filled mt-3 mb-3">create account</button>
+            <div><button className="button-filled mt-3 mb-3" onClick={redirectHandlerUp}>create account</button>
         <p className="mt-3">Already have an account?</p>
         <button className="button-trans" onClick={redirectHandlerIn}>Sign In</button>
         </div>

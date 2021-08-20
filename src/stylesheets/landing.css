@@ -9,7 +9,7 @@
 }
 .form-block {
   background-color: var(--ui-light-grey);
-  width: 800px;
+  width: 700px;
   float: left;
   height: 100%;
   border-top-right-radius: 15px;
@@ -34,4 +34,8 @@
   padding: 0 20px;
   color: var(--ui-dark-grey);
   left: calc(50% - 34px);
+}
+.form-floating>label{
+  color: var(--ui-grey);
+  font-weight: 300;
 }
