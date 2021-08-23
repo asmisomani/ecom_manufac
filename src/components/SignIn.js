@@ -1,10 +1,10 @@
 import React from "react";
 import "../stylesheets/landing.css";
 import Form from "react-bootstrap/Form";
-
 import FloatingLabel from "react-bootstrap/FloatingLabel"
 import Container from "react-bootstrap/Container"
 import {useHistory} from "react-router-dom"
+import ParticleBG from "../particle/ParticleBG";
 
 
 export default function Landing() {
@@ -39,5 +39,6 @@ export default function Landing() {
       </div>
       
     </div>
+   
   );
 }

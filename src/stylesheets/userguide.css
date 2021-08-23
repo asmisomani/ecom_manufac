@@ -7,3 +7,38 @@
 .carousel-caption p{
     color: var(--ui-dark-grey);
 }
+.btn-prev{
+    left: 0;
+    background-color: white;
+    opacity: 1;
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10% !important;
+    left: 5%;
+    border: 3px solid var(--primary-2);
+    top: inherit;
+    z-index: 2;
+}
+.btn-prev:hover{
+    border: 3px solid var(--primary-1);
+}
+.btn-next{
+    background-color: var(--primary-2);
+    opacity: 1;
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: calc(10% + 80px) !important;
+    left: 5%;
+    border: 3px solid var(--primary-2);
+    top: inherit;
+    z-index: 2;
+}
+.btn-next:hover{
+    background-color: var(--primary-1);
+    border-color: var(--primary-1);
+    opacity: 1;
+}

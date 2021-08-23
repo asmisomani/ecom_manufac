@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./stylesheets/bootstrap_change.css"
 import {Route , Switch} from "react-router-dom"; 
 import UserGuide from "./pages/UserGuide";
-
+import SetPlan from "./pages/SetPlan"
 
 function App() {
   return (
@@ -11,6 +11,9 @@ function App() {
       <Landing/>
       <Route path="/userguide">
         <UserGuide/>
+      </Route>
+      <Route path="/setplan">
+        <SetPlan/>
       </Route>
     </div>
   );
