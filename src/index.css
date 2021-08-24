@@ -86,4 +86,9 @@ font-weight: 400;
   border: 3px solid var(--primary-1);
   color: var(--primary-1);
 }
-
+a{
+  text-decoration: none !important;
+}
+a:hover{
+  color: currentColor !important;
+}

@@ -1,0 +1,29 @@
+.w-min-content{
+    width: min-content !important;
+}
+.leftbar{
+    background-color: var(--ui-light-grey) !important;
+    width: 64px !important;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    height: 100% !important;
+    box-shadow: 1px 1px 5px grey;
+}
+.offcanvas{
+    z-index: 1050 !important;
+}
+
+.schedule_a_meet{
+    background-color: var(--primary-1);
+    color: var(--ui-white);
+    font-variant: small-caps;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+}
+.schedule_a_meet:hover{
+    color:white !important ;
+}

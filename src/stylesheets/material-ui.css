@@ -1,0 +1,13 @@
+.MuiAppBar-colorPrimary {
+    color: var(--primary-2) !important;
+    background-color: var(--ui-light-grey) !important;}
+    
+    .MuiInputBase-input{
+    color: var(--primary-1) !important;
+}
+.MuiIconButton-root{
+    padding: 20px !important;
+}
+#root > div > div:nth-child(2) > div > div > button:nth-child(1){
+    color:var(--primary-2);
+}
