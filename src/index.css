@@ -43,7 +43,18 @@ body {
 .primary-3{
   color:var(--primary-3);
 }
-
+.ui-black{
+  color: var(--ui-black);
+}
+.ui-dark-grey{
+  color:var(--ui-dark-grey);
+}
+.ui-grey{
+  color: var(--ui-grey);
+}
+.ui-light-grey{
+  color:var(--ui-light-grey);
+}
 /* headings */
 /* h1 */
 .start-heading{
@@ -53,42 +64,48 @@ font-weight: 400;
 .placeholder{
   color: var(--ui-grey);
 }
-
+.capital{
+  text-transform: capitalize;
+}
 
 /* comp */
 .button-filled{
-  background-color: var(--primary-2);
-  color: var(--ui-white);
-  border: 3px solid var(--primary-2);
+  background-color: var(--primary-2) !important;
+  color: var(--ui-white) !important;
+  border: 3px solid var(--primary-2) !important;
   border-radius: 10px;
   padding: 0.75em 2.5em;
-  text-transform: capitalize;
+  text-transform: capitalize !important;
   width: 300px;
   margin: 0 auto;
   font-weight: 500;
 }
 .button-filled:hover,.button-filled:active,.button-filled:focus{
-  background-color: var(--primary-1);
-  border: 3px solid var(--primary-1);
+  background-color: var(--primary-1) !important;
+  border: 3px solid var(--primary-1) !important;
 }
 .button-trans{
-  background-color: transparent;
-  border: 3px solid var(--primary-2);
-  color: var(--ui-white);
-  border-radius: 10px;
+  background-color: transparent !important;
+  border: 3px solid var(--primary-2) !important;
+  color: var(--ui-white) !important;
+  border-radius: 10px ;
   padding: 0.75em 2.5em;
   width: 300px;
   margin: 0 auto;
-  color: var(--primary-2);
+  color: var(--primary-2) !important;
   font-weight: 500;
 }
 .button-trans:hover,.button-trans:active,.button-trans:focus{
-  border: 3px solid var(--primary-1);
-  color: var(--primary-1);
+  border: 3px solid var(--primary-1) !important;
+  color: var(--primary-1) !important;
 }
 a{
   text-decoration: none !important;
 }
 a:hover{
   color: currentColor !important;
+}
+.uppercase{
+  text-transform: uppercase;
+  font-weight: 300;
 }

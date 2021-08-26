@@ -24,14 +24,13 @@ import ContactSupportIcon from "@material-ui/icons/ContactSupport";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import RateReviewIcon from "@material-ui/icons/RateReview";
-import { useState } from "react-dom";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Assignment } from "@material-ui/icons";
 import Tooltip from "@material-ui/core/Tooltip";
-import { Divider } from "@material-ui/core";
 import {Offcanvas} from "react-bootstrap";
-
 import help from "../images/support.svg"
+import {Modal , Button} from "react-bootstrap"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -100,18 +99,71 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =useState(null);
+  const [show, setShow] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
+
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
-  const [show, setShow] = React.useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  const [search, setSearch] = React.useState(null);
+  const icons = [
+    {
+      title: "",
+      icon: <MenuIcon />,
+    },
+    {
+      title: "Dashboard",
+      icon: <DashboardIcon />,
+      path: "/dashboard",
+    },
+    {
+      title: "Orders",
+      icon: <StoreIcon />,
+      path: "/orders",
+    },
+    {
+      title: "Inventory",
+      icon: <QueueIcon />,
+      path: "/inventory",
+    },
+    {
+      title: "Shipping",
+      icon: <LocalShippingIcon />,
+      path: "/shipping",
+    },
+    {
+      title: "Finance",
+      icon: <AccountBalanceIcon />,
+      path: "/finance",
+    },
+    {
+      title: "Review",
+      icon: <RateReviewIcon />,
+      path: "/review",
+    },
+    {
+      title: "Report",
+      icon: <DescriptionIcon />,
+      path: "/report",
+    },
+    {
+      title: "Record",
+      icon: <AssignmentIcon />,
+      path: "/record",
+    },
+    {
+      title: "Connect",
+      icon: <LinkIcon />,
+      path: "/connect",
+    },
+    {
+      title: "Sign Out",
+      icon: <ExitToAppIcon />,
+      path: "/signout",
+    },
+  ];
+  const [search, setSearch] = useState(null);
 
   function searchHandler(e) {
     setSearch(e.target.value);
@@ -133,6 +185,14 @@ export default function PrimarySearchAppBar() {
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
+
+  const showModalCloseOffcanvas=()=>{
+    setModalShow(true)
+    setShow(false)
+  }
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const menuId = "primary-search-account-menu";
   const renderMenu = (
@@ -160,7 +220,11 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit " onClick={handleShow}>
+        <IconButton
+          aria-label="show 4 new mails"
+          color="inherit "
+          onClick={handleShow}
+        >
           <ContactSupportIcon />
         </IconButton>
         <p>Messages</p>
@@ -189,7 +253,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton
             edge="start"
@@ -218,7 +282,11 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit" onClick={handleShow}>
+            <IconButton
+              aria-label="show 4 new mails"
+              color="inherit"
+              onClick={handleShow}
+            >
               <ContactSupportIcon />
             </IconButton>
             <IconButton aria-label="show 17 new notifications" color="inherit">
@@ -252,83 +320,39 @@ export default function PrimarySearchAppBar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
-      <div className="leftbar d-flex flex-column align-items-center justify-content-between w-min-content ">
-        <IconButton>
-          <MenuIcon />
-        </IconButton>
-        <Tooltip title="Dashboard" placement="right">
-          
-          <IconButton color="var(--primary-1)">
-            <DashboardIcon />
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Orders" placement="right">
-          
-          <IconButton color="var(--primary-1)">
-            <StoreIcon />
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Inventory" placement="right">
-          
-          <IconButton color="var(--primary-1)">
-            <QueueIcon />
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Shipping" placement="right">
-          
-          <IconButton color="var(--primary-1)">
-            <LocalShippingIcon />
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Finance" placement="right">
-          
-          <IconButton color="var(--primary-1)">
-            <AccountBalanceIcon />
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Review" placement="right">
-          
-          <IconButton color="var(--primary-1)">
-            <RateReviewIcon />
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Report" placement="right">
-          
-          <IconButton color="var(--primary-1)">
-            <DescriptionIcon />
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Record" placement="right">
-          
-          <IconButton color="var(--primary-1)">
-            <AssignmentIcon />
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Connect" placement="right">
-          
-          <IconButton color="var(--primary-1)">
-            <LinkIcon />
-          </IconButton>
-        </Tooltip>
-        <hr/>
-        <Tooltip title="Sign Out" placement="right">
-          <IconButton color="var(--primary-1)">
-            <ExitToAppIcon />
-          </IconButton>
-        </Tooltip>
+      <div className="leftbar d-flex flex-column align-items-center justify-content-between w-min-content position-fixed ">
+        {icons.map((icons) => {
+          return (
+            <Tooltip title={icons.title} placement="right">
+              <Link to={icons.path}><IconButton>{icons.icon}</IconButton></Link>
+            </Tooltip>
+          );
+        })}
       </div>
-      <Offcanvas show={show} onHide={handleClose} placement="end" backdrop="false">
+      <Offcanvas show={show} onHide={handleClose} placement="end">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
-            <img src={help} height="100px"/>
+            <img src={help} height="100px" />
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, vitae.
-          <Link to="/meet" className="schedule_a_meet" >schedule a video call</Link>
+          <button className="schedule_a_meet" onClick={showModalCloseOffcanvas}>
+            schedule a video call
+          </button>
         </Offcanvas.Body>
       </Offcanvas>
+      <Modal className="center" size="sm" show={modalShow} onHide={()=>setModalShow(false)} centered aria-labelledby="contained-modal-title-vcenter">
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">Schedule a Meet</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Schedule a meet with the customer care for further help. <br/> Click on Open App to schedule the meet's date and time</Modal.Body>
+        <Modal.Footer>
+          <Button className="button-filled" >
+            Open Microsoft 365
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }
-

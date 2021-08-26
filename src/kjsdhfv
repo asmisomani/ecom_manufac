@@ -1,0 +1,15 @@
+<Modal size="lg" show={modalShow} onHide={()=>setModalShow(false)} className="cancel-modal mod" centered aria-labelledby="contained-modal-title-vcenter">
+        <Modal.Header closeButton className="center">
+          <Image src="" fluid/>
+          <Modal.Title id="contained-modal-title-vcenter">Schedule a Meet</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="center">Schedule a meet with the customer care for further help. <br/> Click on Open App to schedule the meet's date and time</Modal.Body>
+        <Modal.Footer className="center">
+          <Button className="button-trans" onClick={()=>setModalShow(false)}>
+            Cancel
+          </Button>
+          <Button className="button-filled" >
+            Open Microsoft 365
+          </Button>
+        </Modal.Footer>
+      </Modal>

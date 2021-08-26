@@ -11,3 +11,6 @@
 #root > div > div:nth-child(2) > div > div > button:nth-child(1){
     color:var(--primary-2);
 }
+.MuiAppBar-root{
+    z-index: 1000 !important;
+}

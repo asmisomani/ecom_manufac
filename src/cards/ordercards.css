@@ -1,0 +1,23 @@
+.con{
+    background-color: var(--ui-light-grey);
+    box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.5);
+    border-radius: 10px;
+    padding: 1rem;
+    width: fit-content;
+    margin: 1rem;
+
+}
+.w-inherit{
+    width: inherit !important;
+}
+.btn-secondary{
+    background-color: var(--ui-grey) !important;
+    border: var(--primary-1) !important;
+    width: inherit !important;
+    color: var(--ui-black);
+}
+.con .button-trans,.con .button-filled{
+    height: 40px;
+    width: 150px;
+    padding: 0px;
+}

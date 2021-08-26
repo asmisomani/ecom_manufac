@@ -27,3 +27,26 @@
 .schedule_a_meet:hover{
     color:white !important ;
 }
+.secnav{
+    background-image: linear-gradient(to right,var(--primary-1),var(--primary-2));
+    height: 3rem;
+    display: flex;
+    color: var(--ui-white);
+    align-items: center;
+    position: relative;
+    top: 64px;
+    left: 64px;
+    overflow-x: scroll;
+
+}
+.secnav a{
+    text-decoration: none;
+    color: var(--ui-white);
+    padding: 10px 2rem;
+}
+.secnav a:hover, .secnav a:active {
+    border-bottom: 5px solid var(--ui-white);
+}
+.text-right{
+    text-align: right;
+}
