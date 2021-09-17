@@ -1,75 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 body {
   margin: 0;
   background-color: #3f3f3f;
 }
-
+#root{
+  overflow: hidden;
+}
 /* colors */
-:root{
+:root {
+  --primary-1: #175873;
+  --primary-2: #2b7c85;
+  --primary-3: #dfedea;
 
-  --primary-1:#175873;  
-  --primary-2:#2B7C85;
-  --primary-3:#DFEDEA;
+  --ui-black: #333333;
+  --ui-dark-grey: #949494;
+  --ui-grey: #c4c4c4;
+  --ui-light-grey: #e9e9e9;
+  --ui-white: #f9f9f9;
 
-  --ui-black:#333333;
-  --ui-dark-grey:#949494;
-  --ui-grey:#c4c4c4;
-  --ui-light-grey:#e9e9e9;
-  --ui-white:#f9f9f9;
-
-  --funky-pink:#F59FCB;
-  --funky-green:#71E4D7;
-  --funky-purple:#8889E3;
-  --funky-orange:#FFB775;
-  --funky-blue:#3EA1BF;
-  --funky-red:#F7B5B5;
+  --funky-pink: #f59fcb;
+  --funky-green: #71e4d7;
+  --funky-purple: #8889e3;
+  --funky-orange: #ffb775;
+  --funky-blue: #3ea1bf;
+  --funky-red: #f7b5b5;
 }
 
-.primary-1{
+.primary-1 {
   color: var(--primary-1);
 }
-.primary-2{
+.primary-2 {
   color: var(--primary-2);
 }
-.primary-3{
-  color:var(--primary-3);
+.primary-3 {
+  color: var(--primary-3);
 }
-.ui-black{
+.ui-black {
   color: var(--ui-black);
 }
-.ui-dark-grey{
-  color:var(--ui-dark-grey);
+.ui-dark-grey {
+  color: var(--ui-dark-grey);
 }
-.ui-grey{
+.ui-grey {
   color: var(--ui-grey);
 }
-.ui-light-grey{
-  color:var(--ui-light-grey);
+.ui-light-grey {
+  color: var(--ui-light-grey);
 }
 /* headings */
 /* h1 */
-.start-heading{
-text-transform: uppercase;
-font-weight: 400;
+.start-heading {
+  text-transform: uppercase;
+  font-weight: 400;
 }
-.placeholder{
+.placeholder {
   color: var(--ui-grey);
 }
-.capital{
+.capital {
   text-transform: capitalize;
 }
 
 /* comp */
-.button-filled{
+
+.button-filled.sm {
+  background-color: var(--primary-2) !important;
+  color: var(--ui-white) !important;
+  border: 3px solid var(--primary-2) !important;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-transform: capitalize !important;
+  margin-left:10px;
+  font-weight: 300;
+  width: max-content;
+}
+.button-filled {
   background-color: var(--primary-2) !important;
   color: var(--ui-white) !important;
   border: 3px solid var(--primary-2) !important;
@@ -80,32 +93,48 @@ font-weight: 400;
   margin: 0 auto;
   font-weight: 500;
 }
-.button-filled:hover,.button-filled:active,.button-filled:focus{
+.button-filled:hover,
+.button-filled:active,
+.button-filled:focus {
   background-color: var(--primary-1) !important;
   border: 3px solid var(--primary-1) !important;
 }
-.button-trans{
+.button-trans.sm {
   background-color: transparent !important;
   border: 3px solid var(--primary-2) !important;
   color: var(--ui-white) !important;
-  border-radius: 10px ;
+  border-radius: 10px;
+  margin-left:10px;
+  padding: 5px 10px;
+  color: var(--primary-2) !important;
+  font-weight: 300;
+  width: max-content;
+}
+.button-trans {
+  background-color: transparent !important;
+  border: 3px solid var(--primary-2) !important;
+  color: var(--ui-white) !important;
+  border-radius: 10px;
   padding: 0.75em 2.5em;
   width: 300px;
   margin: 0 auto;
   color: var(--primary-2) !important;
   font-weight: 500;
 }
-.button-trans:hover,.button-trans:active,.button-trans:focus{
+.button-trans:hover,
+.button-trans:active,
+.button-trans:focus {
   border: 3px solid var(--primary-1) !important;
   color: var(--primary-1) !important;
 }
-a{
+a {
   text-decoration: none !important;
 }
-a:hover{
+a:hover {
   color: currentColor !important;
 }
-.uppercase{
+.uppercase {
   text-transform: uppercase;
   font-weight: 300;
 }
+

@@ -1,15 +1,21 @@
-import React from 'react'
-import OrdersCards from '../cards/OrdersCards'
-import {ORDERS} from "../staticData/OrdersData"
+import React from "react";
+import NewOrders from "../components/orders/NewOrders";
+import { Switch, Route, Redirect } from "react-router-dom";
+import { SEC_NAV_DATA } from "../components/nav/SecNavData";
+import ConfirmedOrders from "../components/orders/ConfirmedOrders";
 
 export default function Orders(props) {
-   
+  return (
+    <Switch>
+        
+      {SEC_NAV_DATA.map((data) => { return (
+            <Route path={data.path}>{data.component}</Route>
+      )})
+      
+      }
+      
     
-    return (
-        <div style={{margin:"4rem 0px",display:"flex",flexFlow:"row",flexWrap:"wrap",justifyContent:"center"}}>
-            {ORDERS.map((orders)=>{return (
-                    <OrdersCards orders={orders} />
-            )})}
-        </div>
-    )
+      
+    </Switch> 
+  );
 }

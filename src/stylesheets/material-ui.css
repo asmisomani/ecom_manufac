@@ -5,7 +5,7 @@
     .MuiInputBase-input{
     color: var(--primary-1) !important;
 }
-.MuiIconButton-root{
+.secnav.MuiIconButton-root{
     padding: 20px !important;
 }
 #root > div > div:nth-child(2) > div > div > button:nth-child(1){
@@ -13,4 +13,18 @@
 }
 .MuiAppBar-root{
     z-index: 1000 !important;
+}
+.MuiFormLabel-root.Mui-focused{
+    color: var(--primary-3) !important;
+}
+.MuiCheckbox-colorPrimary.Mui-checked{
+    color:var(--primary-1) !important
+}
+.MuiDrawer-paper{
+    top: 64px !important;
+    z-index: 2 !important;
+    height: 90% !important;
+}
+.MuiButton-textPrimary{
+    color: var(--primary-2) !important;
 }

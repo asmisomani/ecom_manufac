@@ -1,6 +1,6 @@
 import React from 'react'
-import SignUp from '../components/SignUp'
-import SignIn from '../components/SignIn'
+import SignUp from '../components/auth/SignUp'
+import SignIn from '../components/auth/SignIn'
 import {Route, Switch} from "react-router-dom"
 import UserGuide from './UserGuide'
 

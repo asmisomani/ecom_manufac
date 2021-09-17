@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./ordercards.css";
 import cancel from "../images/cancel.svg";
 import confirm from "../images/confirm.svg"
 import {

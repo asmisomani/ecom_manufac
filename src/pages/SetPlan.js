@@ -1,5 +1,5 @@
 import React from 'react'
-import Setplan from '../components/Setplan'
+import Setplan from '../components/payment/Setplan'
 
 export default function SetPlan() {
     return (
